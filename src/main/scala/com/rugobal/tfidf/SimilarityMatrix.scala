@@ -55,13 +55,14 @@ class SimilarityMatrix(matrix: BlockMatrix, rowIndexMap: Map[String, Long], colI
     }
 
     // Print the matrix
+    println(separation)
     println(header)
     println(separation)
-    for (rowDoc <- rowDocs) {
+    rowDocs.foreach( rowDoc => {
       val rowIdx = this.rowIndexMap(rowDoc)
       val rowEntries = entries.filter(_.i == rowIdx)
       printRow(rowDoc, rowEntries, corpus)
-    }
+    })
     println(separation)
   }
 

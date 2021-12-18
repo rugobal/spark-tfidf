@@ -37,6 +37,7 @@ comparator.addSimilarities(queryDf, "query", threshold = 0.8).show
 |   steven obrian|                  []|
 |   david beckham|                  []|
 |    rubens gomes|       [ruben gomez]|
++----------------+--------------------+
 
 
 ```
