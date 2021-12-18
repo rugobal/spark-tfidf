@@ -61,7 +61,7 @@ val comparator = new TextComparator(df, "name")
 val result: SimilarityMatrix = comparator.calculateSimilarities(queryDf, "query")
 result.show
 
-
++------------------+------------------+---------------+-----------+-----------------+--------------+
 |               doc|catherine boothman|matt beckingham|ruben gomez|rubencio gonsalez|stephen obrien|
 +------------------+------------------+---------------+-----------+-----------------+--------------+
 |  catherin zothman|           0.83020|        0.10804|    0.05464|          0.00000|       0.11339|
