@@ -47,7 +47,7 @@ Shows the similarity matrix between 2 DataFrames
 
 ```
 
-/ df1
+// df1
 val docs: RDD[String] = spark.sparkContext.parallelize(Array("ruben gomez", "catherine boothman", "matt beckingham", "stephen obrien", "rubencio gonsalez"))
 val df = docs.toDF("name")
 
