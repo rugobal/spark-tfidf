@@ -114,7 +114,10 @@ class TextComparator(df: DataFrame, corpusCol: String) extends Serializable {
   }
 
   private def toBlockMatrix(rdd: RDD[(Vector, Long)]) = {
-    new IndexedRowMatrix(rdd.map{ case (v, idx) => IndexedRow(idx.toInt, MlLibVectors.dense(v.toDense.values)) }).toCoordinateMatrix.toBlockMatrix
+    new IndexedRowMatrix(rdd.map{ case (v, idx) =>
+      val sv = v.toSparse
+      IndexedRow(idx.toInt, MlLibVectors.sparse(sv.size, sv.indices, sv.values))
+    }).toCoordinateMatrix.toBlockMatrix
   }
 
 
