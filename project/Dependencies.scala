@@ -12,7 +12,8 @@ object Library {
 
   // spark
   lazy val sparkCore         = "org.apache.spark" %% "spark-core" % Version.spark
-  lazy val sparkSql         = "org.apache.spark" %% "spark-sql" % Version.spark
+  lazy val sparkSql          = "org.apache.spark" %% "spark-sql" % Version.spark
+  lazy val sparkMllib        = "org.apache.spark" %% "spark-mllib" % Version.spark
 
   // other
 
@@ -27,7 +28,8 @@ object Dependencies {
 
   val spark = Seq(
     sparkCore           % "provided" withSources() withJavadoc(),
-    sparkSql            % "provided" withSources() withJavadoc()
+    sparkSql            % "provided" withSources() withJavadoc(),
+    sparkMllib          % "provided" withSources() withJavadoc()
   )
 
   val other = Seq(
