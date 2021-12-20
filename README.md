@@ -1,17 +1,17 @@
-# spark-tfidf
+# Uses Spark SQL API to create a TFIDF powered text comparator
 
-Spark SQL TFIDF version
+## Compare columns in 2 different dataframes and find similarities between them
 
 The corpus is formed by 2-Grams of the values input column, instead of full words, so it provides higher accuracy.
 Suitable for small sentences, names, addresses, etc
 
-Functionality is provided in the TextComparator class. Look at TextComparatorText for examples of usage.
+Functionality is provided in the TextComparator class. Look at TextComparatorTest for examples of usage.
 
 
-Main functionality:
+# Main functionality:
 
 
-Adds to a DataFrame, the similarities found on another DataFrame's column
+## Adds to a DataFrame, the similarities found on another DataFrame's column
 
 ```
 
@@ -43,7 +43,7 @@ comparator.addSimilarities(queryDf, "query", threshold = 0.8).show
 ```
 
 
-Shows the similarity matrix between 2 DataFrames
+## Shows the similarity matrix between 2 DataFrames
 
 ```
 
